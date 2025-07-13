@@ -1,0 +1,11 @@
+git pull main là kéo code về khi mà các nhánh đã được merge 
+git rebase main là từ một nhánh khác cần code đã merge ở main về để sử dụng 
+git log --oneline dùng để xem lịch sử hànhd dộng (thêm -n19 để lấy bao nhiêu dòng trường hợp code qua nhiều năm thì khá nhiều)
+git branch -D tennhanh dùng để xoá nhánh
+git checkout -b tennhanh đùng dể tạo một nhánh khác
+git checkout tennhanh để di chuyển qua lại giữa các nhánh
+git commit --amend -m "" dùng để gộp commit gần nhất với commit hiện tại thành một commit tránh commit bừa nonclean git
+git push origin tennhanh -f thêm (-f cho lần commit thứ 2 trên cùng một commit)
+git remote rm origin xoá đi link remote của git
+git remote add origin link thêm link remote cho dự án (nói thêm origin đai diện cho link remote từ dự án trên git để push từ local lên git. muốn xem thì dùng git remote -v để xem )
+workflow: Repo gốc → Fork về GitHub cá nhân → Clone về máy → Tạo branch → Code → Commit → Push → Pull Request → Merge về dev → Merge về main
